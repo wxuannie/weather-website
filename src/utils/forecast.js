@@ -10,8 +10,10 @@ export const forecast = (lat, long, callback) => {
             callback('Unable to find location. Try another search.', undefined);
         }else {
             const current = body.current;
+            console.log(current);
             callback(undefined, {
-                forecast: current.weather_descriptions[0] + '. It is currenlty ' + current.temperature + ' degrees out. It feels like ' + current.feelslike + ' degrees out.'
+                forecast: current.weather_descriptions[0] + '. It is currenlty ' + current.temperature + ' degrees out. It feels like ' + current.feelslike + ' degrees out. Humidity is at ' + current.humidity + "%.",
+                icon: current.weather_icons[0]
             });
         }
     });

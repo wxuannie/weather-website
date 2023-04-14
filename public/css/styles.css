@@ -45,6 +45,14 @@ button {
     padding: 8px;
 }
 
+table {
+    margin: 16px 0;
+}
+
+table p {
+    margin: 0;
+}
+
 .portrait {
     width: 250px;
 }
